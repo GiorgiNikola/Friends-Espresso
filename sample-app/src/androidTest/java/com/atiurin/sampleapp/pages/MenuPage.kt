@@ -7,7 +7,7 @@ import org.hamcrest.Matcher
 import org.hamcrest.Matchers
 
 object MenuPage {
-    fun returnItem(itemName: String) : Matcher<View>{
+    fun returnItem(itemName: String): Matcher<View> {
         val menuItem: Matcher<View> by lazy {
             Matchers.allOf(
                 ViewMatchers.withId(R.id.design_menu_item_text),

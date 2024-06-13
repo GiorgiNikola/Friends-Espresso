@@ -10,36 +10,36 @@ import com.atiurin.ultron.extensions.typeText
 import org.junit.Assert
 
 object ChatPageSteps {
-    fun validateCorrectChatOpened(friendName: String){
-        with(ChatPage){
+    fun validateCorrectChatOpened(friendName: String) {
+        with(ChatPage) {
             Assert.assertEquals(friendName, friendNameDisplayed.getText())
         }
     }
 
-    fun inputMessage(message: String){
-        with(ChatPage){
+    fun inputMessage(message: String) {
+        with(ChatPage) {
             inputMessageText.typeText(message)
         }
     }
 
-    fun sendMessage(){
-        with(ChatPage){
+    fun sendMessage() {
+        with(ChatPage) {
             sendMessageBtn.tap()
         }
     }
 
     private fun getListItemAtPosition(position: Int): ChatRecyclerItem {
-        with(ChatPage){
+        with(ChatPage) {
             return messagesList.getItem(position)
         }
     }
 
-    class ChatRecyclerItem : UltronRecyclerViewItem(){
+    class ChatRecyclerItem : UltronRecyclerViewItem() {
         val text by lazy { getChild(ViewMatchers.withId(R.id.message_text)) }
     }
 
     fun validateLastMessage(expectedMessage: String) = apply {
-        with(ChatPage){
+        with(ChatPage) {
             val actualMessage = getListItemAtPosition(messagesList.getSize() - 1).text.getText()
             Assert.assertEquals(expectedMessage, actualMessage)
         }

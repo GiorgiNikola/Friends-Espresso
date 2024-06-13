@@ -7,20 +7,20 @@ import com.atiurin.ultron.extensions.withTimeout
 import org.junit.Assert
 
 object MainPageSteps {
-    fun dashboardValidation(){
-        with(MainPage){
+    fun dashboardValidation() {
+        with(MainPage) {
             Assert.assertTrue(dashboard.isViewDisplayed())
         }
     }
 
-    fun openFriendChat(friendName: String){
-        with(MainPage){
+    fun openFriendChat(friendName: String) {
+        with(MainPage) {
             returnFriendChat(friendName).withTimeout(2000).click()
         }
     }
 
     fun openMenu() {
-        with(MainPage){
+        with(MainPage) {
             menuBtn.tap()
         }
     }

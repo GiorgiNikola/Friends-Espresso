@@ -9,8 +9,8 @@ import org.hamcrest.Matcher
 import org.junit.Assert
 
 object CustomClicksPageSteps {
-    fun validateCustomClicks(){
-        with(CustomClicksPage){
+    fun validateCustomClicks() {
+        with(CustomClicksPage) {
             Assert.assertTrue(bottomRightCircle.isViewDisplayed())
         }
     }
@@ -19,7 +19,7 @@ object CustomClicksPageSteps {
         circle.tap()
     }
 
-    fun validateCircleMarked(circle: Matcher<View>){
+    fun validateCircleMarked(circle: Matcher<View>) {
         Assert.assertTrue(circle.isChecked())
     }
 }
