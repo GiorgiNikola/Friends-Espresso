@@ -8,7 +8,7 @@ import com.atiurin.sampleapp.steps.MainPageSteps
 import com.atiurin.sampleapp.steps.MenuPageSteps
 import org.junit.Test
 
-class GreetingTests : BaseTest() {
+class GreetingTests : MyBaseTest() {
 
     @Test
     fun textingTest() {

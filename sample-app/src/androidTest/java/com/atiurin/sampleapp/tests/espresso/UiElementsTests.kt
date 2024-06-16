@@ -6,7 +6,7 @@ import com.atiurin.sampleapp.steps.MenuPageSteps
 import com.atiurin.sampleapp.steps.UiElementsPageSteps
 import org.junit.Test
 
-class UiElementsTests : BaseTest() {
+class UiElementsTests : MyBaseTest() {
 
     @Test
     fun invisibleBtnTest() {

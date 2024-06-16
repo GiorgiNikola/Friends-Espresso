@@ -13,4 +13,10 @@ object Constants {
     const val CLICK = "Click "
     const val CLICK_COUNT = 8
     const val ZERO = 0
+    const val EMMET_BROWN = "Emmet Brown"
+    const val LETS_DRINK = "let's go for a drink"
+    const val FRIEND17 = "Friend17"
+    const val CHANGE_NAME = "please change your name"
+    const val FRIEND25 = "Friend25"
+    const val HERO_TEXT = "you are my hero"
 }
