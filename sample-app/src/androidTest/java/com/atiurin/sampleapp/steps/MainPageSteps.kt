@@ -36,7 +36,7 @@ object MainPageSteps {
     fun swipeToFriend(friendName: String, start: Int, end: Int) {
         var i = 0
         with(MainPage) {
-            while (!returnFriendChat(friendName).isViewDisplayed() && i <= 10) {
+            while (!returnFriendChat(friendName).isViewDisplayed() && i <= 15) {
                 swipeDown(start, end)
                 i++
             }
@@ -44,6 +44,6 @@ object MainPageSteps {
     }
 
     private fun swipeDown(start: Int, end: Int) {
-        swiper(start, end, 5)
+        swiper(start, end, 10)
     }
 }

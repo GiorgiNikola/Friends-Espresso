@@ -5,7 +5,6 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.LargeTest
 import com.atiurin.sampleapp.activity.MainActivity
 import com.atiurin.sampleapp.steps.ChatPageSteps
-import com.atiurin.sampleapp.steps.MainPageSteps
 import org.junit.Rule
 import org.junit.runner.RunWith
 
@@ -15,13 +14,7 @@ open class MyBaseTest {
     @get:Rule
     var activityScenarioRule = ActivityScenarioRule(MainActivity::class.java)
 
-    fun weekendVibeTestsSetup(friendName: String, message: String, start: Int, end: Int) {
-        with(MainPageSteps) {
-            // ეს ფუნქციაც მუშაობს
-            // scrollToFriend(friendName)
-            swipeToFriend(friendName, start, end)
-            openFriendChat(friendName)
-        }
+    fun weekendVibeTestsCommonSteps(friendName: String, message: String) {
         with(ChatPageSteps) {
             validateCorrectChatOpened(friendName)
             inputMessage(message)
